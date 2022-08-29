@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  oidc: {
+    clientId: 'DEMO',
+    issuer: 'http://localhost:8080/realms/SAT',
+    loadUserInfo: true,
+    postLogoutRedirectUri: 'http://localhost:8080',
+    redirectUri: 'http://localhost:4200/content',
+    responseType: 'code',
+    scope: 'openid profile address email phone offline_access'
+  }
 };
 
 /*
